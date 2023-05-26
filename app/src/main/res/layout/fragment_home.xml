@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#2E34CC"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:theme="@style/SearchViewTheme"
+            app:searchIcon="@drawable/ic_search"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/search_edit_text_rounded_corner"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/profile"
+            app:layout_constraintStart_toStartOf="@+id/header_layout"
+            app:layout_constraintTop_toTopOf="@+id/header_layout" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/search_view"
+            app:layout_constraintEnd_toEndOf="@+id/header_layout"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="@+id/header_layout"
+            app:layout_constraintTop_toTopOf="@+id/search_view"
+            app:srcCompat="@drawable/profile" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_for_you"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_meetings"
+            app:layout_constraintStart_toStartOf="@+id/search_view"
+            app:layout_constraintTop_toBottomOf="@+id/search_view"
+            app:srcCompat="@drawable/ic_for_you" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_meetings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/iv_videos"
+            app:layout_constraintStart_toEndOf="@+id/iv_for_you"
+            app:layout_constraintTop_toTopOf="@+id/iv_for_you"
+            app:srcCompat="@drawable/ic_meetings" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_videos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/iv_chats"
+            app:layout_constraintStart_toEndOf="@+id/iv_meetings"
+            app:layout_constraintTop_toTopOf="@+id/iv_for_you"
+            app:srcCompat="@drawable/ic_videos" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_chats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_for_you_2"
+            app:layout_constraintStart_toEndOf="@+id/iv_videos"
+            app:layout_constraintTop_toBottomOf="@+id/search_view"
+            app:srcCompat="@drawable/ic_chats" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_for_you_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/header_layout"
+            app:layout_constraintStart_toEndOf="@+id/iv_chats"
+            app:layout_constraintTop_toBottomOf="@+id/search_view"
+            app:srcCompat="@drawable/ic_for_you" />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/tv_iv_for_you"
+           android:layout_width="0dp"
+           android:text="For you"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="@+id/iv_for_you"
+           app:layout_constraintStart_toStartOf="@+id/iv_for_you"
+           app:layout_constraintTop_toBottomOf="@+id/iv_for_you" />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/tv_meetings"
+           android:layout_width="0dp"
+           android:text="Meetings"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="@+id/iv_meetings"
+           app:layout_constraintStart_toStartOf="@+id/iv_meetings"
+           app:layout_constraintTop_toBottomOf="@+id/iv_for_you" />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/tv_videos"
+           android:layout_width="0dp"
+           android:text="Videos"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="@+id/iv_videos"
+           app:layout_constraintStart_toStartOf="@+id/iv_videos"
+           app:layout_constraintTop_toBottomOf="@+id/iv_for_you" />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/tv_chats"
+           android:layout_width="0dp"
+           android:text="Chats"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="@+id/iv_chats"
+           app:layout_constraintStart_toStartOf="@+id/iv_chats"
+           app:layout_constraintTop_toBottomOf="@+id/iv_for_you" />
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/tv_for_you_2"
+           android:layout_width="0dp"
+           android:text="For you"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:layout_constraintEnd_toEndOf="@+id/iv_for_you_2"
+           app:layout_constraintStart_toStartOf="@+id/iv_for_you_2"
+           app:layout_constraintTop_toBottomOf="@+id/iv_for_you" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_post" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

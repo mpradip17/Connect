@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/home_active"
+            android:title="" />
+
+        <item
+            android:id="@+id/recordFragment"
+            android:icon="@drawable/ic_record_inactive"
+            android:title="" />
+
+        <item
+            android:id="@+id/addFragment"
+            android:icon="@drawable/plus"
+            android:title="" />
+
+        <item
+            android:id="@+id/messageFragment"
+            android:icon="@drawable/ic_message_inactive"
+            android:title="" />
+
+        <item
+            android:id="@+id/kingFragment"
+            android:icon="@drawable/king_inactive"
+            android:title="" />
+</menu>

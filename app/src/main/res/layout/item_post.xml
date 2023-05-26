@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_cover"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/pro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@id/tv_name"
+        app:layout_constraintStart_toEndOf="@id/item_cover"
+        app:layout_constraintTop_toTopOf="@id/item_cover"
+        tools:text="OXAGON" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/open_sans"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/item_cover"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="NEOMOXAGON" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/open_sans"
+        android:maxLines="4"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/item_cover"
+        app:layout_constraintTop_toBottomOf="@id/item_cover"
+        tools:text="Products of the future need factories of the future.
+        OXAGON's advanced clean industries fuse principal of Industry 4.0 and the circular economy" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="0dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_desc"
+        app:layout_constraintStart_toStartOf="@id/tv_desc"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc"
+        app:srcCompat="@drawable/imagess" />
+
+    <TextView
+        android:id="@+id/tv_liked_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textSize="@dimen/_9ssp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableStart="@drawable/blue_like"
+        android:text="Souri V and 5 others"
+        android:textColor="#444444"
+        app:layout_constraintBottom_toTopOf="@+id/footer_layout"
+        app:layout_constraintStart_toStartOf="@id/iv_banner"
+        app:layout_constraintTop_toBottomOf="@id/iv_banner"
+        tools:text="Souri V and 5 others" />
+
+    <TextView
+        android:id="@+id/tv_commented_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:textSize="@dimen/_9ssp"
+        android:textColor="#2E34CC"
+        android:drawablePadding="@dimen/_5sdp"
+        android:drawableStart="@drawable/blue_comment"
+        android:text="100"
+        app:layout_constraintEnd_toEndOf="@id/iv_banner"
+        app:layout_constraintTop_toTopOf="@id/tv_liked_users"
+        tools:text="100" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_footer"
+        app:layout_constraintTop_toBottomOf="@+id/tv_liked_users"
+        app:layout_constraintEnd_toEndOf="@+id/tv_desc"
+        app:layout_constraintStart_toStartOf="@+id/tv_desc">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_like"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_comment"
+            app:layout_constraintStart_toStartOf="@+id/footer_layout"
+            app:layout_constraintTop_toTopOf="@+id/footer_layout"
+            app:srcCompat="@drawable/ic_like" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/iv_share"
+            app:layout_constraintStart_toEndOf="@+id/iv_like"
+            app:layout_constraintTop_toTopOf="@+id/iv_like"
+            app:srcCompat="@drawable/ic_comment" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/iv_bookmark"
+            app:layout_constraintStart_toEndOf="@+id/iv_comment"
+            app:layout_constraintTop_toTopOf="@+id/iv_like"
+            app:srcCompat="@drawable/ic_share" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/footer_layout"
+            app:layout_constraintStart_toEndOf="@+id/iv_share"
+            app:layout_constraintTop_toTopOf="@+id/iv_like"
+            app:srcCompat="@drawable/ic_bookmark" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_iv_for_you"
+            android:layout_width="0dp"
+            android:text="Like"
+            android:textSize="@dimen/_9ssp"
+            android:textAlignment="center"
+            android:textColor="@color/blackk"
+            android:fontFamily="@font/open_sans"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_like"
+            app:layout_constraintStart_toStartOf="@+id/iv_like"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/footer_layout"
+            app:layout_constraintTop_toBottomOf="@+id/iv_like" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_meetings"
+            android:layout_width="0dp"
+            android:text="Comment"
+            android:textAlignment="center"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/open_sans"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/footer_layout"
+            android:textColor="@color/blackk"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_comment"
+            app:layout_constraintStart_toStartOf="@+id/iv_comment"
+            app:layout_constraintTop_toBottomOf="@+id/iv_like" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_videos"
+            android:layout_width="0dp"
+            android:text="Share"
+            android:textAlignment="center"
+            android:fontFamily="@font/open_sans"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/footer_layout"
+            android:textColor="@color/blackk"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_share"
+            app:layout_constraintStart_toStartOf="@+id/iv_share"
+            app:layout_constraintTop_toBottomOf="@+id/iv_like" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_chats"
+            android:layout_width="0dp"
+            android:text="Save Post"
+            android:textAlignment="center"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/open_sans"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/footer_layout"
+            android:textColor="@color/blackk"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_bookmark"
+            app:layout_constraintStart_toStartOf="@+id/iv_bookmark"
+            app:layout_constraintTop_toBottomOf="@+id/iv_like" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:background="#F5F7FC"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="@+id/footer_layout"
+        app:layout_constraintEnd_toEndOf="@+id/footer_layout"
+        app:layout_constraintTop_toBottomOf="@+id/footer_layout"
+        android:layout_width = "0dp"
+        android:layout_height="@dimen/_3sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
