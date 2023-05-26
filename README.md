@@ -1,2 +1,3 @@
 # Connect
-![alt text]([[http://url/to/img.png])
+
+![myimage-alt-tag](https://ibb.co/p0k61Y3)
